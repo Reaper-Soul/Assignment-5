@@ -31,7 +31,6 @@
 		<br>
 	</div>
 </div>	
-<?php require_once 'app/views/templates/footer.php' ?>
 
 <script>
 	function togglePassword() {
