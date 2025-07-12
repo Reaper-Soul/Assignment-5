@@ -1,16 +1,16 @@
 <footer class="footer fixed-bottom pt-3 bg-dark text-white">    
     <div class="column">
-        <div class="row-lg-12 text-center margin-bottom-10">
-            <ul class="d-flex flex-row list-unstyled justify-content-center fs-5">
+        <div class="row-lg-12 text-center">
+            <ul class="d-flex flex-row list-unstyled justify-content-center fs-5 mb-1">
                 <li><a href="https://github.com/Reaper-Soul/Assignment-5" target="_blank"><i class="fa-brands fa-github me-4 text-white"></i></a></li>
                 <li><a href="mailto:navisharma@algomau.ca" target="_blank"><i class="fa-solid fa-envelope text-white"></i></a></li>
             </ul>
         </div>
-        <div class="row-lg-12 text-center margin-bottom-10">
-            <p class="fs-5">Made with ❤️ by Navish Sharma</p>
+        <div class="row-lg-12 text-center">
+            <p class="fs-5 mb-1">Made with ❤️ by Navish Sharma</p>
         </div>
-        <div class="row-lg-12 text-center margin-bottom-10">
-            <p>Copyright &copy; <?php echo date('Y'); ?> </p>
+        <div class="row-lg-12 text-center">
+            <p class="mb-2">Copyright &copy; <?php echo date('Y'); ?> </p>
         </div>
     </div>
 </footer>
