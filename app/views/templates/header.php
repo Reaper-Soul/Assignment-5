@@ -34,13 +34,15 @@ if (!isset($_SESSION['auth'])) {
         </li>
       </ul>
     </div>
-    <div class="d-flex ms-auto">
-                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#newReminderModal"> <i class="fas fa-plus me-2"></i> New Reminder</button>
-    </div>
+      <div class="d-flex ms-auto gap-3">
+                  <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#newReminderModal"> <i class="fas fa-plus me-2"></i> New Reminder</button>
+        <a href="/logout" name="Logout" class="btn border border-2 border-danger rounded-circle"><i class="fa-solid fa-power-off text-danger"></i></a>
+      </div>
     </div>
   </div>
 </nav>
 
+      
 <!--reminder modal-->      
 <div class="modal fade" id="newReminderModal" tabindex="-1" aria-labelledby="newReminderModalLabel" aria-hidden="true">
         <div class="modal-dialog">
