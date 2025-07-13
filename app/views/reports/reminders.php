@@ -43,7 +43,7 @@
             <thead class="table-light position-sticky top-0 bg-light">
               <tr>
                 <th>#</th>
-                <th>Name</th>
+                <th>Reminder Name</th>
                 <th>Created At</th>
                 <th>Created By</th>
               </tr>

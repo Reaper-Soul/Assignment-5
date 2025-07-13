@@ -8,7 +8,7 @@
 
     public function getAllReminders(){
       $db = db_connect();
-      $query = $db->prepare("SELECT * FROM notes WHERE is_deleted = 0;");
+      $query = $db->prepare("SELECT * FROM notes WHERE is_deleted = 0 ORDER BY created_at DESC;");
       $query->execute();
       return $query->fetchAll(PDO::FETCH_ASSOC);
     }
