@@ -1,3 +1,9 @@
+<?php
+    if (strtolower($_SESSION['username']) !== 'admin') {
+        header('Location: /home');
+        exit;
+    }
+?>
 <?php require_once 'app/views/templates/header.php' ?>
 <div class="container my-4">
     <div class="page-header" id="banner">
