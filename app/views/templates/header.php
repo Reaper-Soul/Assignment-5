@@ -2,7 +2,9 @@
 $current_page = $_SESSION['current_page'] ?? '';
 if (!isset($_SESSION['auth'])) {
     header('Location: /login');
+    exit;
 }
+$admin = $_SESSION['username'] === 'Admin' ? true : false;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +34,11 @@ if (!isset($_SESSION['auth'])) {
         <li class="nav-item">
           <a class="nav-link <?= ($current_page == 'reminders') ? 'active' : '' ?>" href="/reminders">My Reminders</a>
         </li>
+        <?php if ($admin === true): ?>
+          <li class="nav-item">
+            <a class="nav-link <?= ($current_page == 'reports') ? 'active' : '' ?>" href="/reports">Reports</a>
+          </li>
+        <?php endif; ?>
       </ul>
     </div>
       <div class="d-flex ms-auto gap-3">

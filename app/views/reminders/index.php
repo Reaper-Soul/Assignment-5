@@ -3,7 +3,7 @@
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Reminders</h2>
+                <h2>Reminders 🔔</h2>
               <table class="table table-bordered table-striped mt-4">
                 <thead class="table-light">
                   <tr>

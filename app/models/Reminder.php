@@ -2,8 +2,6 @@
 
 class Reminder {
 
-    public $subject;
-
     public function __construct() {
 
     }
