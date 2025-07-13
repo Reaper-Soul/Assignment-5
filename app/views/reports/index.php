@@ -17,7 +17,7 @@
                             <div class="card-body">
                                 <h5 class="card-title fw-semi-bold">Reminders</h5>
                                 <p class="card-text text-wrap text-secondary">Displays the whole list of reminders created by the users, their creation time, and also provide details like who has the most number of active reminders.</p>
-                                <a href="#reminders" class="btn btn-dark">View</a>
+                                <a href="reports/reminders" class="btn btn-dark">View</a>
                             </div>
                         </div>
                          <!-- CARD #2 -->
@@ -26,7 +26,7 @@
                             <div class="card-body">
                                 <h5 class="card-title fw-semi-bold">User Info</h5>
                                 <p class="card-text text-wrap text-secondary">Displays some information regarding the users of the website, specifically their usernames, their last login time, etc.</p>
-                                <a href="#user-info" class="btn btn-dark">View</a>
+                                <a href="reports/user_info" class="btn btn-dark">View</a>
                             </div>
                         </div>
                     </div>
