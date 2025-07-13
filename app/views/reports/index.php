@@ -25,7 +25,7 @@
                               <img height='200' src="https://images.unsplash.com/vector-1739893035568-bbea72128361?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dXNlciUyMGljb258ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title fw-semi-bold">User Info</h5>
-                                <p class="card-text text-wrap text-secondary">Displays some information regarding the users of the website, specifically their usernames, their last login time, etc.</p>
+                                <p class="card-text text-wrap text-secondary">Displays some information regarding the users of the applicaton, specifically their usernames, their last login time, past days activity etc.</p>
                                 <a href="reports/user_info" class="btn btn-dark">View</a>
                             </div>
                         </div>
