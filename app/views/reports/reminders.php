@@ -35,10 +35,10 @@
                 </div>
             </div>
             <h4>Activity Chart 📈</h4>
-            <canvas id="remindersChart" style="width:100%;"></canvas>
+            <canvas id="remindersChart" style="width:90%;"></canvas>
         </div>
       <div class="column d-flex flex-column" style="flex: 6; height: 100%;">
-        <div class="table-wrapper flex-grow-1 overflow-scroll">
+        <div class="table-wrapper flex-grow-1 overflow-auto mb-20">
           <table class="table table-bordered table-striped m-0">
             <thead class="table-light position-sticky top-0 bg-light">
               <tr>

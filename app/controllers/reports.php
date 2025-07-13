@@ -21,7 +21,12 @@ class Reports extends Controller {
 
    public function user_info(){
       $_SESSION['current_page'] = 'reports';
-      $this->view('reports/user-info');
+      $reports = $this->model('Report');
+      $count = $reports->getUserCount();
+      $activity = $reports->getUserActivity(5);
+      $user = $reports->getMostActiveUser();
+      $attempts = $reports->getAllLoginAttempts();
+      $this->view('reports/user-info', ['activity' => $activity, 'user' => $user, 'count' => $count, 'attempts' => $attempts]);
       die;
    }
 }
