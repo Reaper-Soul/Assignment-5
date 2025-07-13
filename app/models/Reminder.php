@@ -15,6 +15,10 @@ class Reminder {
                         'subject' => $subject,
                         'user' => $_SESSION['username'],
                         ]);
+        $_SESSION['alert'] = [
+            'type' => 'success',
+            'message' => 'New reminder added!'
+        ];
         header('Location: /reminders');
     }
 
@@ -29,6 +33,10 @@ class Reminder {
         $db = db_connect();
         $query = $db->prepare("UPDATE notes SET is_deleted = 1 WHERE id = :uid;");
         $query->execute(['uid' => $uid]);
+        $_SESSION['alert'] = [
+            'type' => 'success',
+            'message' => 'Reminder deleted!'
+        ];
         header('Location: /reminders');
     }
 
@@ -36,6 +44,10 @@ class Reminder {
         $db = db_connect();
         $query = $db->prepare("UPDATE notes SET is_completed = :value WHERE id = :uid;");
         $query->execute(['uid' => $uid, 'value' => $value]);
+        $_SESSION['alert'] = [
+            'type' => 'success',
+            'message' => 'Reminder status updated!'
+        ];
         header('Location: /reminders');
     }
 }

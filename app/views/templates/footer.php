@@ -1,3 +1,4 @@
+<?php include 'app/views/templates/alert.php'; ?>
 <footer class="footer fixed-bottom pt-3 bg-dark text-white">    
     <div class="column">
         <div class="row-lg-12 text-center">
@@ -15,13 +16,17 @@
     </div>
 </footer>
 
-</div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <style>
-    li{
+    li {
         cursor: pointer;
     }
+    .alert {
+        z-index: 99;
+        position: relative;
+    }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"></script>
 </body>
 </html>
