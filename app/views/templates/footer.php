@@ -3,7 +3,7 @@
 <!-- Scroll-to-Top Button -->
 <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
 
-<footer class="footer fixed-bottom pt-3 bg-dark text-white">    
+<footer class="footer fixed-bottom pt-1 bg-dark text-white">    
     <div class="column">
         <div class="row-lg-12 text-center">
             <ul class="d-flex flex-row list-unstyled justify-content-center fs-5 mb-1">
@@ -41,10 +41,12 @@
         z-index: 99;
         position: relative;
     }
+
+    /* Always show scroll-to-top button */
     #scrollTopBtn {
-        display: none;
+        display: block !important; /* force it to be visible */
         position: fixed;
-        bottom: 80px; /* Place above the footer */
+        bottom: 80px; /* position above the footer */
         right: 30px;
         z-index: 999;
         font-size: 18px;
@@ -57,6 +59,7 @@
         border-radius: 10px;
         box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
     }
+
     #scrollTopBtn:hover {
         background-color: #0056b3;
     }
@@ -64,15 +67,7 @@
 
 <!-- Scroll Button Script -->
 <script>
-    // Show scroll button when user scrolls down
-    window.onscroll = function () {
-        const btn = document.getElementById("scrollTopBtn");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
-        }
-    };
+   
 
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });

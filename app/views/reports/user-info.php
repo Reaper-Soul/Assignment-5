@@ -13,21 +13,21 @@
         <div class="column d-flex flex-column gap-1 bg-body p-3" style="flex: 4;">
             <div class="d-flex flex-row gap-3 justify-content-between">
               <!-- CARD-1 -->
-                <div class="card bg-dark text-white p-3 mb-3" style="flex: 1; border-radius: 5%;">
+                <div class="card bg-dark text-white p-3 mb-3" style="flex: 3; border-radius: 5%;">
                   <div class="card-title">Total Users</div>
                   <div class="card-body">
                     <p class="fs-3 text-info"><?= $count ?></p>
                   </div>
                 </div>
               <!-- CARD-2 -->
-                <div class="card bg-dark text-white p-3 mb-3" style="flex: 1; border-radius: 5%;">
+                <div class="card bg-dark text-white p-3 mb-3" style="flex: 3; border-radius: 5%;">
                   <div class="card-title">Login Today</div>
                   <div class="card-body">
                     <p class="fs-3 text-info"><?= end($activity) ?></p>
                   </div>
                 </div>
               <!-- CARD-3 -->
-                <div class="card bg-dark text-white p-3 mb-3" style="flex: 1; border-radius: 5%;">
+                <div class="card bg-dark text-white p-3 mb-3" style="flex: 3; border-radius: 5-%;">
                   <div class="card-title">Most Active</div>
                   <div class="card-body">
                     <p class="fs-3 text-info"><?= $user ?></p>
