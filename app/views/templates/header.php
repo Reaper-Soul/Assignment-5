@@ -8,18 +8,42 @@ $admin = $_SESSION['username'] === 'Admin' ? true : false;
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="icon" href="/favicon.png">
-        <title>COSC 4806</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
-    </head>
-    <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #63c5da;">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" href="/favicon.png">
+    <title>COSC 4806</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <style>
+        /* Scroll-to-top button style */
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 999;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #63c5da;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#" style="color:white; font-weight: bold;">COSC 4806</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,30 +66,33 @@ $admin = $_SESSION['username'] === 'Admin' ? true : false;
       </ul>
     </div>
       <div class="d-flex ms-auto gap-3">
-                  <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#newReminderModal"> <i class="fas fa-plus me-2"></i> New Reminder</button>
-        <a href="/logout" name="Logout" class="btn border border-2 border-danger rounded-circle"><i class="fa-solid fa-power-off text-danger"></i></a>
+        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#newReminderModal">
+          <i class="fas fa-plus me-2"></i> New Reminder
+        </button>
+        <a href="/logout" name="Logout" class="btn border border-2 border-danger rounded-circle">
+          <i class="fa-solid fa-power-off text-danger"></i>
+        </a>
       </div>
     </div>
   </div>
 </nav>
 
-      
-<!--reminder modal-->      
+<!-- Reminder Modal -->
 <div class="modal fade" id="newReminderModal" tabindex="-1" aria-labelledby="newReminderModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="newReminderModalLabel">Create New Reminder</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form action="/reminders/create" method="POST">
-                <div class="mb-3">
-                  <label for="reminder-title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="reminder-title" name="reminder-title" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Save Reminder</button>
-              </form>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newReminderModalLabel">Create New Reminder</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/reminders/create" method="POST">
+          <div class="mb-3">
+            <label for="reminder-title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="reminder-title" name="reminder-title" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Reminder</button>
+        </form>
       </div>
     </div>
   </div>
